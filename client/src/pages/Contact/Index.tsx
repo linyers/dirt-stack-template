@@ -1,20 +1,10 @@
-import Form from "@/components/Form";
 import Layout from "./Layout";
 
-const Index = ({ user, name }: { user: any; name: string }) => {
+const Index = ({ user }: { user: any }) => {
   return (
     <>
       <h1>Welcome</h1>
-      {user ? (
-        <>
-          <p>Hello {user.username}, welcome to your firt Inertia app!</p>
-        </>
-      ) : (
-        <p>Welcome to your first Inertia app!</p>
-      )}
-
-      <Form />
-      {name && <p>Hi {name}</p>}
+      <p>Hello {user.username}, welcome to your firt Inertia app!</p>
     </>
   );
 };
