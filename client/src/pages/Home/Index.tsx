@@ -6,11 +6,9 @@ const Index = (): React.ReactNode => {
       <h1 className="mt-10 text-blue-500 font-bold text-center text-6xl">
         D.I.R.T Stack Template
       </h1>
-      <ul className="mt-10 text-4xl self-center text-slate-400">
+      <ul className="mt-10 text-4xl self-center text-white">
         <li>
-          <span className="">
-            <span className="text-blue-500 font-semibold">D</span>jango
-          </span>
+          <span className="text-blue-500 font-semibold">D</span>jango
         </li>
         <li>
           <span className="text-blue-500 font-semibold">I</span>nertia
@@ -19,7 +17,7 @@ const Index = (): React.ReactNode => {
           <span className="text-blue-500 font-semibold">R</span>eact
         </li>
         <li>
-          <span className="text-blue-500 font-semibold">T</span>ailwind CSS
+          <span className="text-blue-500 font-semibold">T</span>ailwindCSS
         </li>
       </ul>
     </>

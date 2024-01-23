@@ -12,12 +12,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         >
           Home
         </Link>
-        <Link
-          className={`${pathname === "/about/" ? "text-blue-500" : "hover:text-blue-500"}`}
-          href="/about"
-        >
-          About
-        </Link>
         <Link className="hover:text-blue-500" href="/contact">
           Contact
         </Link>

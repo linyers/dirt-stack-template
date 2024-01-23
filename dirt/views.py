@@ -10,11 +10,6 @@ def index(request):
     return {}
 
 
-@inertia("Home/About")
-def about(request):
-    return {}
-
-
 @login_required(login_url="/login")
 @inertia("Contact/Index")
 def contact(request):
