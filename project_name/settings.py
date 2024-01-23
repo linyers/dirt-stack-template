@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-=on5&y7kp3ao9y0(*mnzc!db-d2$-2@b8i#nhzrk*7-g-rvf%a"
+SECRET_KEY = "{{ secret_key }}"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -52,7 +52,7 @@ MIDDLEWARE = [
     "inertia.middleware.InertiaMiddleware",
 ]
 
-ROOT_URLCONF = "dirt.urls"
+ROOT_URLCONF = "{{ project_name }}.urls"
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "dirt.wsgi.application"
+WSGI_APPLICATION = "{{ project_name }}.wsgi.application"
 
 
 # Database
