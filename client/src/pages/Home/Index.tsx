@@ -2,28 +2,27 @@ import * as React from "react";
 
 const Index = (): React.ReactNode => {
   return (
-    <div className="flex flex-col gap-y-4 p-2">
-      <h1 className="text-blue-800 text-4xl">D.I.R.T Stack Tutorial</h1>
-      <div className="bg-blue-100 border-blue-800 border-2 flex flex-col p-4 rounded">
-        <p className="text-blue-800 text-lg">
-          The D.I.R.T Stack consists of 4 major pieces
-        </p>
-      </div>
-      <ul className="text-2xl">
+    <>
+      <h1 className="mt-10 text-blue-500 font-bold text-center text-6xl">
+        D.I.R.T Stack Template
+      </h1>
+      <ul className="mt-10 text-4xl self-center text-slate-400">
         <li>
-          <span className="font-semibold">D</span>jango
+          <span className="">
+            <span className="text-blue-500 font-semibold">D</span>jango
+          </span>
         </li>
         <li>
-          <span className="font-semibold">I</span>nertia
+          <span className="text-blue-500 font-semibold">I</span>nertia
         </li>
         <li>
-          <span className="font-semibold">R</span>eact
+          <span className="text-blue-500 font-semibold">R</span>eact
         </li>
         <li>
-          <span className="font-semibold">T</span>ailwind CSS
+          <span className="text-blue-500 font-semibold">T</span>ailwind CSS
         </li>
       </ul>
-    </div>
+    </>
   );
 };
 
