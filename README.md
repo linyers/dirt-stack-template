@@ -12,6 +12,8 @@ A template for Django that uses Inertiajs, React with TypeScript, and TailwindCS
 django-admin startproject --template https://github.com/linyers/dirt-stack-template/archive/master.zip my_django_project .
 ```
 
+- Run `pnpm i`
+
 - Run `python manage.py runserver` and `pnpm run dev` (in different terminals) and got to http://127.0.0.1:8000
 
 # Acknowledgments
