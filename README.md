@@ -70,7 +70,7 @@ A template for Django that uses Inertiajs, React with TypeScript, and TailwindCS
 2.  Build Js/assets for production
 
     ```sh
-    pnpm run dev
+    pnpm run build
     ```
 
 3.  Run the Django's migrations
