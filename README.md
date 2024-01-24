@@ -4,7 +4,19 @@ A template for Django that uses Inertiajs, React with TypeScript, and TailwindCS
 
 ## How to use
 
-- Setup some virtual enviroment and install `django` `inertia-django` `django-vite`.
+- Setup some virtual enviroment and install required python dependencies.
+
+```
+virtualenv venv # or python -m venv venv
+
+# linux and mac
+source .venv/bin/activate
+
+#windows users
+./venv/Scripts/activate
+
+pip install -r requirements.txt
+```
 
 - Run
 
