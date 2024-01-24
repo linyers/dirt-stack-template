@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "vite-build": "vite build",
+    "build": "vite build && cp client/dist/.vite/manifest.json client/dist/manifest.json",
     "vite-dev": "vite",
     "tailwind-dev": "tailwindcss -i ./static/css/main.css -o ./static/dist/css/app.css --watch",
     "dev": "concurrently \"npm run tailwind-dev\" \"npm run vite-dev\" ",
