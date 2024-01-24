@@ -4,29 +4,104 @@ A template for Django that uses Inertiajs, React with TypeScript, and TailwindCS
 
 ## How to use
 
-- Setup some virtual enviroment and install required python dependencies.
+### Setup
 
-```
-virtualenv venv # or python -m venv venv
+1. Setup some virtual enviroment (virtualenv, poetry, etc) and activate them
 
-# linux and mac
-source .venv/bin/activate
+   ```sh
+   virtualenv venv # or python -m venv venv
 
-#windows users
-./venv/Scripts/activate
+   # linux and mac
+   source venv/bin/activate
 
-pip install django inertia-django django-vite
-```
+   #windows users
+   ./venv/Scripts/activate
+   ```
 
-- Run
+2. Install the python dependencies
 
-```
-django-admin startproject --template https://github.com/linyers/dirt-stack-template/archive/master.zip my_django_project .
-```
+   ```sh
+   pip install django inertia-django django-vite whitenoise
+   ```
 
-- Run `pnpm i`
+3. Run
 
-- Run `python manage.py runserver` and `pnpm run dev` (in different terminals) and got to http://127.0.0.1:8000
+   ```sh
+   django-admin startproject --template https://github.com/linyers/dirt-stack-template/archive/master.zip my_django_project .
+   ```
+
+4. Install node dependencies
+
+   ```sh
+   pnpm i
+   ```
+
+### Development
+
+1. Run the Django's migrations
+
+   ```sh
+   ./manage.py migrate
+   ```
+
+2. Run D.I.R.T. Vite's dev server
+
+   ```sh
+   pnpm run dev
+   ```
+
+3. Run the Django dev server (in other terminal)
+
+   ```sh
+   ./manage.py runserver
+   ```
+
+### Production
+
+1.  Set `DEBUG=False` in Django's project settings
+
+    ```python
+    # In settings.py
+    ...
+    DEBUG=False
+    ...
+    ```
+
+2.  Build Js/assets for production
+
+    ```sh
+    pnpm run dev
+    ```
+
+3.  Run the Django's migrations
+
+    ```sh
+    ./manage.py migrate
+    ```
+
+4.  Run `collectstatic`
+
+    ```sh
+    rm -rf staticfiles/
+    ./manage.py collectstatic
+    ```
+
+5.  Run the Django production server
+
+    a. Run the simple WSGI Django's server
+
+    ```sh
+    ./manage.py runserver
+    ```
+
+    b. Or install a WSGI server of your preference and run it, for example, Gunicorn
+
+    ```sh
+    pip install gunicorn
+
+    # run the server
+    gunicorn --env DJANGO_SETTINGS_MODULE={{ project_name }}.settings {{ project_name }}.wsgi:application --bind 0.0.0.0:8000
+    ```
 
 # Acknowledgments
 
