@@ -15,7 +15,7 @@ source .venv/bin/activate
 #windows users
 ./venv/Scripts/activate
 
-pip install -r requirements.txt
+pip install django inertia-django django-vite
 ```
 
 - Run
